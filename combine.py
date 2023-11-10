@@ -18,5 +18,5 @@ for file in os.listdir("data"):
 combined_df = pd.concat(dfs)
 
 # Print the combined dataframe
-combined_df.to_csv("data/full_dataset_with_sentiment_sum_combined.csv", index=True)
+combined_df.to_csv("data/articles_topics.csv", index=True)
 
