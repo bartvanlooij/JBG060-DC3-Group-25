@@ -25,7 +25,7 @@ This can be done by running `create_sentiment.py`. This uses multiprocessing so 
 
 ## Recreating all the topics
 
-This can be done by running the `topic_moddeling.ipynb` notebook from top to bottom. To create the topic modelling using a different model, simple remove `southsudan_model` from the folder and run all the cells. This will create a new model. This performs the topic modeling process and it for each topic it creates three seperate columns, namely `<topic>_positive`, `<topic>_neutral`, `<topic>_negative`. 
+This can be done by running the `topic_moddeling.ipynb` notebook from top to bottom. This performs the topic modeling process and it for each topic it creates three seperate columns, namely `<topic>_positive`, `<topic>_neutral`, `<topic>_negative`. 
 
 ## Recreating the results from the manual labelling experiment
 
