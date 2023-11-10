@@ -4,7 +4,7 @@ from multiprocessing import Process
 import numpy as np
 import pandas as pd
 
-df_full = pd.read_csv("data/full_datasett.csv", index_col=0)
+df_full = pd.read_csv("data/articles_topics.csv", index_col=0)
 from tqdm import tqdm
 
 tqdm.pandas()
@@ -29,9 +29,7 @@ def get_sentiment_roberta_split(df_section, start, end):
     df_section["sentiment_roberta"] = df_section["paragraphs"].progress_apply(
         lambda x: get_sentiment_roberta(x, sentiment_task)
     )
-    df_section.to_csv(
-        f"data/full_dataset_with_sentiment_{start}_{end}.csv", index=True
-    )
+    df_section.to_csv(f"data/full_dataset_with_sentiment_{start}_{end}.csv", index=True)
 
 
 def get_sentiment_roberta(row, sentiment_task):
